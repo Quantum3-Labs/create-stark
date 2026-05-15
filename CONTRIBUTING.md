@@ -27,6 +27,18 @@ Our goal is to simplify the DApp development and learning process, enabling deve
 - **Coding Standards**: Follow the coding conventions and maintain the code quality as described in our documentation.
 - **Commit Messages**: Write clear, concise commit messages that describe your changes and their impact.
 
+## Local Development
+
+When running `create-stark` from a local checkout (rather than via `npx create-stark`), you must build the CLI before invoking it:
+
+```sh
+yarn install
+yarn build
+yarn cli   # or: node bin/create-dapp-ss2.js
+```
+
+The compiled `dist/` output is gitignored and rebuilt by the publish flow (`yarn changeset:release`), so `npx` users always receive a fresh build. Local-checkout testers, however, will hit a stale or missing `dist/cli.js` if they skip `yarn build`.
+
 ## Submitting Contributions
 
 1. **Pull Requests**: Submit a PR to the main repository with a detailed description of your changes.
