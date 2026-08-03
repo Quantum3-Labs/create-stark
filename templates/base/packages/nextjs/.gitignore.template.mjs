@@ -1,4 +1,5 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+const contents = () => 
+`# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
@@ -40,4 +41,6 @@ next-env.d.ts
 public/sw.js
 public/workbox-*.js
 public/sw.js.map
-public/workbox-*.js.map
+public/workbox-*.js.map`
+
+export default contents;

@@ -1,4 +1,5 @@
-.vscode/**
+const contents = () => 
+`.vscode/**
 node_modules
 package-lock.json
 .idea
@@ -39,4 +40,6 @@ target/
 .smoke-test-state.json
 .smoke-test-logs/
 # personal workflow artifact; this is a public template repo
-docs/superpowers/
+docs/superpowers/`
+
+export default contents;
